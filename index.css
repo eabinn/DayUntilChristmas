@@ -1,0 +1,27 @@
+html {
+  height: 100%;
+}
+body {
+  font-family: 'Mountains of Christmas', cursive;
+  letter-spacing: 0.25rem;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  background-image: url('https://img.huffingtonpost.com/asset/5bb43f872100000001c7f717.gif?ops=scalefit_600_noupscale');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.js-clock {
+  margin: 0 auto;
+  font-size: 4rem;
+  text-align: center;
+}
+.js-clock-time {
+  font-size: 2rem;
+  margin: 1rem auto;
+}
