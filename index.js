@@ -1,11 +1,11 @@
 // You're gonna need this
 const NINE_HOURS_MILLISECONDS = 32400000;
-const clockContainer = document.querySelector('.js-clock');
-const time = clockContainer.querySelector('.js-clock-time');
+const clockContainer = document.querySelector(".js-clock");
+const time = clockContainer.querySelector(".js-clock-time");
 
 function getTime() {
   // Don't delete this.
-  const xmasDay = new Date('2019-12-24:00:00:00+0900');
+  const xmasDay = new Date(`${new Date().getFullYear()}-12-24:00:00:00+0900`);
   const nowUTC = Date.parse(new Date().toUTCString() + NINE_HOURS_MILLISECONDS);
   const distance = xmasDay.getTime() - nowUTC;
 
@@ -17,17 +17,17 @@ function getTime() {
 
   time.innerText =
     `${days < 10 ? `0${days}` : days}` +
-    'days ' +
+    "days " +
     `${hours < 10 ? `0${hours}` : hours}` +
-    'hours ' +
+    "hours " +
     `${minutes < 10 ? `0${minutes}` : minutes}` +
-    'mins ' +
+    "mins " +
     `${seconds < 10 ? `0${seconds}` : seconds}` +
-    'secs';
+    "secs";
 
   if (distance < 0) {
     clearInterval(getTime);
-    time.innerHTML = 'Happy Merry Christmas Eve! Tomorrow is the Christmas!!!';
+    time.innerHTML = "Happy Merry Christmas Eve! Tomorrow is the Christmas!!!";
   }
 }
 
@@ -35,4 +35,5 @@ function init() {
   getTime();
   setInterval(getTime, 1000);
 }
+
 init();
